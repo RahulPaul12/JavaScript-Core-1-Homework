@@ -7,8 +7,14 @@
   - Returns an array containing only the names of the who have attended AT LEAST 8 classes
 */
 
-function eligibleStudents() {
-
+function eligibleStudents(students) {
+  var newarr = attendances.filter((element)=>
+    element[1]>=8)
+  let newname=[];
+  for(let element of newarr){
+    newname.push(element[0]);
+  }
+  return newname;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

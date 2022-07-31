@@ -4,8 +4,14 @@
   Write a function that will return all street names which contain 'Lane' in their name.
 */
 
-function getLanes() {
-
+function getLanes(arr) {
+  let newa=[]
+  arr.map(locat=>{
+    if(locat.includes('Lane')){
+      newa.push(locat)
+    }
+  })
+  return  newa
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

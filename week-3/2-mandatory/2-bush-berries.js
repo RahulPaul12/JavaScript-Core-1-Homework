@@ -9,9 +9,22 @@
 
   Use the tests to confirm which message to return
 */
+function pinik(name){
+  return name==="pink";
+}
 
-function bushChecker() {
-
+function bushChecker(name) {
+  var text='';
+  var bool=name.every(pinik)
+  
+  if(bool){
+   return  text='Bush is safe to eat from'
+  }
+  else if(!bool){
+   return text ='Toxic! Leave bush alone!'
+  }
+  return text
+ 
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

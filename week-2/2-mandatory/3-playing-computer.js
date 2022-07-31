@@ -16,7 +16,7 @@
 */
 
 let x = 2;
-let a = 6;
+let a = 6,b;
 
 const f1 = function(a, b) {
   return a + b;

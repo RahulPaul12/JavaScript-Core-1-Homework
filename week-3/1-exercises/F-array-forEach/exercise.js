@@ -8,7 +8,24 @@
 */
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+function check(numer){
+  
+  if(numer%3===0 && numer%5==0){
+    numer='FizzBuzz';
+    
+  }
+  else if(numer%5===0){
+   numer='Buzz';
+  }
+  else if(numer%3===0){
+   numer='Fizz'
+  }
+return numer;
 
+}
+
+var newarr= arr.map(num=>check(num))
+console.log(newarr)
 /* EXPECTED OUTPUT */
 
 /*

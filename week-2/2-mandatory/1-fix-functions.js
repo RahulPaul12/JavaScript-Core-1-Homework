@@ -1,8 +1,8 @@
 // The below functions are syntactically correct but not outputting the right results.
 // Look at the tests and see how you can fix them.
 
-function mood() {
-  let isHappy = true;
+function mood(bool) {
+  let isHappy = bool;
 
   if (isHappy) {
     return "I am happy";
@@ -14,7 +14,7 @@ function mood() {
 function greaterThan10(num) {
   let isBigEnough;
 
-  if (isBigEnough) {
+  if (num>10) {
     return "num is greater than 10";
   } else {
     return "num is not big enough";
@@ -22,20 +22,20 @@ function greaterThan10(num) {
 }
 
 function sortArray(letters) {
-  let sortedLetters = letters;
+  let sortedLetters = letters.sort();
 
   return sortedLetters;
 }
 
 function first5(numbers) {
-  let sliced;
+  let sliced = numbers.slice(0,5);
 
   return sliced;
 }
 
 function get3rdIndex(arr) {
   let index = 3;
-  let element;
+  let element=arr[index];
 
   return element;
 }

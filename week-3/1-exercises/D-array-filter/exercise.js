@@ -5,10 +5,18 @@
   - Finish the statement on line 11 to produce an array with valid content
   - Do not edit any of the existing code
 */
-
+function nullfind(arr){
+  if(arr==null || arr==false){
+    return false;
+  }
+  else{
+    return true;
+  }
+ 
+}
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-var pairsByIndex; // Complete this statement
+var pairsByIndex = pairsByIndexRaw.filter(nullfind); // Complete this statement
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];

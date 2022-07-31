@@ -7,9 +7,12 @@
 
   NOTE: don't include any element that is not a "family".
 */
-
-function colonisers() {
-
+function check(name){
+  return name[0]==='A' && name.includes('family')
+}
+function colonisers(arr) {
+  var newa= arr.filter(name=>check(name))
+  return newa
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

@@ -23,7 +23,27 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
-
+  var newarr=[];
+  var bool='';
+  
+  var upper = /[A-Z]/,
+        lower = /[a-z]/,
+        number = /[0-9]/,
+        special = /[ !"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
+    passwords.map(password=>{
+      bool=(password.length>=5 &&
+        
+        upper.test(password) &&
+        lower.test(password)&&
+        number.test(password)&&
+        special.test(password)&& passwords.indexOf(password) === passwords.lastIndexOf(password)
+      )
+      
+      
+      newarr.push(bool);
+      
+    })
+    return newarr
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -53,5 +73,5 @@ test(
 test(
   "validatePasswords function works - case 2",
   validatePasswords(passwords2),
-  [true, true, false, false, false]
+  [true, false, false, false, false]
 );

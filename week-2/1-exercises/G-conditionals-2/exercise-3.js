@@ -9,7 +9,20 @@
 */
 
 function calculateGrade(mark) {
-
+  var grade='';
+  if(mark==80 || mark>80){
+    grade='A';
+  }
+  else if(mark<80 && mark>60){
+    grade='B';
+  }
+  else if(mark<=60 && mark>50 ){
+    grade='C';
+  }
+  else{
+    grade='F';
+  }
+  return grade;
 }
 
 /* 

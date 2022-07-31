@@ -13,9 +13,37 @@ Create a function called sortAges which:
 You don't have to worry about making this algorithm work fast! The idea is to get you to
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
-
-function sortAges(arr) {}
-
+function non(num){
+  return num.sort()
+}
+ 
+function sortAges(arr) {
+  let newarr=[]
+   arr.forEach((element)=>{
+    if(typeof element ==='number'){
+      newarr.push(element)
+    }
+    
+   })
+   newarr= newarr.sort((a,b)=>a - b)
+   return newarr;
+}
+console.log(sortAges([
+  "🎹",
+  100,
+  "💩",
+  55,
+  "🥵",
+  "🙈",
+  45,
+  "🍕",
+  "Sanyia",
+  66,
+  "James",
+  23,
+  "🎖",
+  "Ismeal",
+]))
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const agesCase1 = [

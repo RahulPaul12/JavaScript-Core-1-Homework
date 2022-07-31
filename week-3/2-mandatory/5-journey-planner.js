@@ -7,7 +7,18 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
+function journeyPlanner(arr,text) {
+  let newarray=[]
+  text.toString()
+  arr.map(locat=>{
+    let bool = locat.includes(text);
+    if(bool){
+      newarray.push(locat[0]);
+      
+    }
+   }
+   )
+   return newarray;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
